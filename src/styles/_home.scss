@@ -1,0 +1,83 @@
+ .home{
+    padding: 2rem 5%;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: calc(100vh - 4rem);
+     
+    >section{
+        width: 100%;
+        height: 28%;
+        margin: auto;
+        background:url("https://img.freepik.com/free-vector/shop-online-symbols_23-2147660601.jpg?size=626&ext=jpg&ga=GA1.1.77324061.1707490823&semt=ais") no-repeat center / cover;;
+    }
+    >h1{
+        @include heading(1px);
+        margin:3rem;
+@include flex(row,space-between,center);
+
+    }
+    .findmore{
+        font-size: 1rem;
+    }
+    >main{
+        flex:1;
+        display: flex;
+        overflow-x: auto;
+        width: 100%;
+        gap: 1rem;
+    }
+
+ }
+
+
+ .product-card{
+
+height: 25rem;
+width: 18.75rem;
+flex: none;
+position: relative;
+background-color: white;
+padding: 1rem;
+overflow-y: auto;
+&::-webkit-scrollbar{
+   display: none;
+}
+@include flex(column,flex-start,center,4px);
+
+    &:hover > div{
+        opacity: 1;
+    }
+    img{
+        @include square(calc(18.75rem - 3rem));
+        margin: 1rem;
+        object-fit: cover;
+    }
+    span{
+        font-size: 1.1rem;
+        font-weight: 700;
+    }
+    div{
+        opacity: 0;
+        @include square(100%);
+        position:absolute;
+        left: 0;
+        top: 0;
+        background-color: #0000006b;
+    @include flex;
+    button{
+        @include flex;
+        @include square(3rem);
+        border-radius: 100%;
+        border:none;
+        background-color: $color3;
+        outline: none;
+        cursor: pointer;
+        font-size: 1.1rem;
+        transition: all 0.3s ;
+        &:hover{
+            rotate: 20deg;
+        }
+    }
+    }
+ }

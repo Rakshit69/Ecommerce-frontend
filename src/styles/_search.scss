@@ -1,0 +1,73 @@
+.product-search-page{
+padding: 2rem;
+@include flex(row,flex-start,stretch,2rem);
+min-height: calc(100vh - 6.5vh);
+
+>aside{
+    min-width: 28rem;
+ box-shadow: 2px 6px 10px rgba(0, 0, 0,0.247);
+
+    padding: 2rem;
+    @include flex(column,flex-start,stretch,0.5rem);
+
+    >h2{
+        @include heading;
+
+    }
+    >div{
+        >input,>select{
+@include inputStyle(100%,
+1rem,
+ white
+,1px solid rgba(154 ,154,154,0.38
+));
+margin: 0.4rem;
+border-radius: 10px;
+
+        }
+    }
+}
+
+>main{
+    width: 100%;
+padding: 0 2rem;
+>h1{
+@include heading;
+
+}
+>input{
+    width: 50%;
+    @include inputStyle;
+    font-size: 1.2rem;
+   
+    border-radius: 6px;
+    display: block;
+}
+  .search-product-list{
+        @include flex(row,flex-start,flex-start);
+        flex-wrap: wrap;
+        overflow-y: auto;
+        height: calc(100% - 10rem);
+        
+        
+     }
+
+     article{
+        @include flex;
+        >button{
+        @include flex;
+@include btn(0.4rem,$color3,$color1);
+border-radius: 10px;
+&:disabled{
+    cursor: not-allowed;
+    opacity: 0.4;
+    color: $color2;
+
+}
+
+        }
+     }
+}
+
+
+}
