@@ -6,6 +6,7 @@ import ProductCard from '../components/product-card';
 import { useLatestProductsQuery } from '../redux/api/productAPI';
 import { addToCart } from '../redux/reducer/cartReducer';
 import { cartItem } from '../types/typesall';
+import React from 'react';
 
 const Home = () => {
 

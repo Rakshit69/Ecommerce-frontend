@@ -9,6 +9,7 @@ import { cartReducerIntitialState } from "../types/reducer-types";
 import { cartItem } from "../types/typesall";
 import axios from "axios";
 import { server } from "../redux/store";
+import React from "react";
 
 
 const Cart = () => {

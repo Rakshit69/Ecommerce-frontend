@@ -11,6 +11,7 @@ import { userExist, userNotExist } from "./redux/reducer/userReducer";
 import { getUser } from "./redux/api/userAPI";
 import { userReducerIntitialState } from "./types/reducer-types";
 import ProtectedRoute from "./components/protected-route";
+import React from "react";
 
 
 const Home = lazy(() => import("./pages/home"));

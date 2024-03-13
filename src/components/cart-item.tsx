@@ -32,3 +32,5 @@ const CartItem = ({ cartItem ,incrementHandler,decerementHandler,removeHandler}:
 }
 
 export default CartItem
+
+

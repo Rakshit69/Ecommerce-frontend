@@ -23,8 +23,8 @@
 //     setIsProcessing(true);
 //     const orderData: NewOrderRequest = {
       
-//     }
-   
+//     }  
+
 //     const { paymentIntent, error } = await stripe.confirmPayment({
 //       elements,
 //       confirmParams: { return_url: window.location.origin },
@@ -131,7 +131,7 @@ const CheckOutForm = () => {
       total,
       user: user?._id!,
     };
-    console.log(orderData);
+    // console.log(orderData);
 
     const { paymentIntent, error } = await stripe.confirmPayment({
       elements,
@@ -170,7 +170,6 @@ const Checkout = () => {
    const location = useLocation();
 
   const clientSecret: string | undefined = location.state;
-  console.log("secert hai "+clientSecret+ "   now location  " + location);
 
   if (!clientSecret) return <Navigate to={"/shipping"} />;
 

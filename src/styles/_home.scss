@@ -33,13 +33,13 @@
 
  .product-card{
 
-height: 25rem;
-width: 18.75rem;
+height: 22rem;
+width: 18rem;
 flex: none;
 position: relative;
 background-color: white;
 padding: 1rem;
-overflow-y: auto;
+overflow-y: hidden;
 &::-webkit-scrollbar{
    display: none;
 }
@@ -49,7 +49,7 @@ overflow-y: auto;
         opacity: 1;
     }
     img{
-        @include square(calc(18.75rem - 3rem));
+        @include square(calc(16.75rem - 3rem));
         margin: 1rem;
         object-fit: cover;
     }
